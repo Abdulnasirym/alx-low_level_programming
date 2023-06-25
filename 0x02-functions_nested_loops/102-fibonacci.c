@@ -12,7 +12,7 @@ int main(void)
 	printf("%lu", first);
 	for (i = 1 ; i < 50 ; i++)
 	{
-		printf("%lu", second);
+		printf(", %lu", second);
 		next = first + second;
 		first = second;
 		second = next;
