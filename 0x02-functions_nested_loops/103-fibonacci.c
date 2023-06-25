@@ -10,7 +10,7 @@ int main(void)
 	int term1 = 1;
 	int term2 = 2;
 	int next;
-	int sum = 0;
+	int sum = 2;
 
 	while (next <= limit)
 	{
