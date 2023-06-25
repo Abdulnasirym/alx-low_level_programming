@@ -10,13 +10,13 @@ int main(void)
 	unsigned long int next, first = 1, second = 2;
 
 	printf("%lu", first);
-	for (i = 1 ; i <= 50 ; i++)
+	for (i = 1 ; i < 50 ; i++)
 	{
 		printf("%lu", second);
 		next = first + second;
 		first = second;
 		second = next;
-		if (i != 50)
+		if (i != 49)
 			printf(", ");
 	}
 	printf("\n");
