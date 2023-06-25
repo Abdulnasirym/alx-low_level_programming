@@ -9,10 +9,10 @@ int main(void)
 	int i;
 	unsigned long int next, first = 1, second = 2;
 
-	printf("%lu", first);
+	printf("%lu, ", first);
 	for (i = 1 ; i < 50 ; i++)
 	{
-		printf(", %lu", second);
+		printf("%lu", second);
 		next = first + second;
 		first = second;
 		second = next;
