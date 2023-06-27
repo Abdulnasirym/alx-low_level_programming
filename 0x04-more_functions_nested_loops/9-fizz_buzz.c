@@ -19,7 +19,7 @@ int main(void)
 		else if (i % 3 == 0)
 		{
 			printf("Fizz");
-			primtf(" ");
+			printf(" ");
 		}
 		else if (i % 5 == 0)
 		{
