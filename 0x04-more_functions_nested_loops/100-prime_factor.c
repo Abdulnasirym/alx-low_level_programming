@@ -15,6 +15,7 @@ int main(void)
 		if (x % y == 0)
 		{
 			x = x / y;
+			y--;
 		}
 	}
 	printf("%lu\n", y);
