@@ -12,7 +12,7 @@ int main(void)
 
 	for (y = 2 ; y <= x ; y++)
 	{
-		if (x% y == 0)
+		if (x % y == 0)
 		{
 			x = x / y;
 			y--;
