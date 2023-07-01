@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _strncat - concatenates n number of bytes from src to dest
@@ -10,16 +11,15 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-	char *destp = dest;
+	int index = strlen(dest);
+	int i = 0;
 
-	while (*destp != '\0')
-		destp++;
-	for (i = 0 ; i < n  && *src != '\0' ; i++)
+	while (i < n && *src != '\0')
 	{
-		*destp = *src;
-		*destp++;
+		dest[index + i] = *src;
+		src++;
+		i++;
 	}
-	*dest = '\0';
+	dest[index + i] = '\0';
 	return (dest);
 }
