@@ -1,32 +1,30 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizeeach word of a string
- * @s: string to capitalize
- * Return: capitalized string (str)
+ * cap_string - function that capitalizes string
+ * @s:  capitalize
+ * Return: s
  */
 
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i;
+	int j;
 
-	while (s[i] != '\0')
+	char st[] = {' ','\t','\n',',',';','.','!','?','"','(',')','{','}'};
+
+	for (i = 0 ; s[i] != '\0' ; i++)
 	{
-		if ((s[i - 1] == ' ' || s[i - 1] == '\n' || s[i - 1] == '\t'
-		|| s[i - 1] == ','
-		|| s[i - 1] == ';' || s[i - 1] == '!'
-		|| s[i - 1] == '?' || s[i - 1] == '"'
-		|| s[i - 1] == '(' || s[i - 1] == ')'
-		|| s[i - 1] == '{' || s[i - 1] == '}'
-		|| s[i - 1] == '.') && (s[i] >= 'a' && s[i] <= 'z'))
-		{
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
 			s[i] = s[i] - 32;
+		for (j = 0; st[j] != '\0' ; j++)
+		{
+			if (s[i] == st[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+					s[i + 1] = s[i + 1] - 32;
+			}
 		}
-		else if ((s[0] >= 97 && s[0] <= 122))
-			s[0] = s[0] - 32;
-		else
-			s[i] = s[i];
-		i++;
 	}
 	return (s);
 }
