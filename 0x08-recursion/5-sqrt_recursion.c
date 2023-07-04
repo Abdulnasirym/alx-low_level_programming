@@ -8,29 +8,23 @@
 
 int _sqrt_recursion(int n)
 {
+	return (square(n, 1));
+}
+
+/**
+ * square - main function
+ * @n: number to find square of
+ * @i: initial value of i
+ * Return: sqaure root
+ */
+
+int square(int n, int i)
+{
 	if (n < 0)
 		return (-1);
-	if (n == 0 || n == 1)
-		return (n);
-
-	int start = 1;
-	int end = n;
-	int result;
-
-	while (start <= end)
-	{
-		int mid = (start + end) / 2;
-
-		if (mid * mid == n)
-			return (mid);
-		if (mid * mid < n)
-		{
-			start = mid + 1;
-			result = mid;
-		}
-		else
-			end = mid - 1;
-	}
-
-	return (result);
+	else if ((i * i) > n)
+		return (-1);
+	else if (i * i == n)
+		return (i);
+	return (square(n, i + 1));
 }
