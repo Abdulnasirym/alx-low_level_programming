@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - adds positie numbers
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 			else
-				sum = sum + argv[i];
+				sum = sum + atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
