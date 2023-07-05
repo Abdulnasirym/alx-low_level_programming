@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - adds positie numbers
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 		{
 			for (j = 0 ; argv[i][j] != '\0' ; j++)
 			{
-				if (!(atoi(argv[i])))
+				if (!(isdigit(argv[i][j])))
 				{
 					printf("Error\n");
 					return (1);
