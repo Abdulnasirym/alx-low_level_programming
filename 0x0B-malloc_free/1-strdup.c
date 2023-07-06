@@ -12,10 +12,11 @@ char *_strdup(char *str)
 	char *copy;
 	int count = 0;
 
-	for (i = 0 ; str[i] != '\0' ; i++)
-		count++;
 	if (str == NULL)
 		return (NULL);
+
+	for (i = 0 ; str[i] != '\0' ; i++)
+		count++;
 
 	copy = malloc(sizeof(char) * (count + 1));
 
