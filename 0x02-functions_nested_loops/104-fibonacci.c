@@ -12,6 +12,7 @@ int main(void)
 	unsigned long int term2 = 2;
 	unsigned long int count = 2;
 	unsigned long int next;
+
 	printf("%lu, %lu", term1, term2);
 	while (count <= limit)
 	{
