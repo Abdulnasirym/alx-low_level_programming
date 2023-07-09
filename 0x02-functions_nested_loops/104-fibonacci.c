@@ -7,16 +7,16 @@
 
 int main(void)
 {
-	unsigned int limit = 98;
-	unsigned int term1 = 1;
-	unsigned int term2 = 2;
-	unsigned int count = 2;
-	unsigned int next;
-	printf("%u, %u", term1, term2);
+	unsigned long int limit = 98;
+	unsigned long int term1 = 1;
+	unsigned long int term2 = 2;
+	unsigned long int count = 2;
+	unsigned long int next;
+	printf("%lu, %lu", term1, term2);
 	while (count <= limit)
 	{
 		next = term1 + term2;
-		printf(", %u", next);
+		printf(", %lu", next);
 		term1 = term2;
 		term2 = next;
 		count++;
