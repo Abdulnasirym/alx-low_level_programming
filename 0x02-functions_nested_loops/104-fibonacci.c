@@ -13,11 +13,11 @@ int main(void)
 	long int count = 2;
 	long int next;
 
-	printf("%lu, %lu", term1, term2);
+	printf("%ld, %ld", term1, term2);
 	while (count <= limit)
 	{
 		next = term1 + term2;
-		printf(", %lu", next);
+		printf(", %ld", next);
 		term1 = term2;
 		term2 = next;
 		count++;
