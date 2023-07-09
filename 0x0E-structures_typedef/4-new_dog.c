@@ -31,14 +31,12 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
-	int namelen = 0;
-	int ownerlen = 0;
-	int i;
+	int namelen;
+	int ownerlen;
 
-	for (i = 0; name[i] != '\0'; i++)
-		namelen++;
-	for (i = 0; owner[i] != '\0'; i++)
-		ownerlen++;
+	namelen = _strlen(name);
+	ownerlen = _strlen(owner);
+
 	newdog = malloc(sizeof(dog_t));
 	if (newdog == NULL)
 		return (NULL);
@@ -55,8 +53,25 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newdog);
 		return (NULL);
 	}
-	newdog->name = _strcpy(newdog->name, name);
-	newdog->owner = _strcpy(newdog->owner, owner);
+	_strcpy(newdog->name, name);
+	_strcpy(newdog->owner, owner);
 	newdog->age = age;
 	return (newdog);
+}
+
+/**
+ * _strlen - length of a string
+ * @s: string toevaluate
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
