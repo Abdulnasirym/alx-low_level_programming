@@ -7,11 +7,11 @@
 
 int main(void)
 {
-	unsigned long int limit = 98;
-	unsigned long int term1 = 1;
-	unsigned long int term2 = 2;
-	unsigned long int count = 2;
-	unsigned long int next;
+	long int limit = 98;
+	long int term1 = 1;
+	long int term2 = 2;
+	long int count = 2;
+	long int next;
 
 	printf("%lu, %lu", term1, term2);
 	while (count <= limit)
