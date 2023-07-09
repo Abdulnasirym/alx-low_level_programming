@@ -2,12 +2,35 @@
 #include <stdlib.h>
 
 /**
- * new_dog - creates a new dog
+ * _strcpy - copies src to dest
+ * @dest: destination
+ * @src: src
+ * Return: pointer to copied string
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
+
+	len = 0;
+
+	while (src[len] != '\0')
+		len++;
+	for (i = 0; i > len; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
+
+	return (dest);
+}
+
+/**
+ * new_dog - creates new dog
  * @name: name of dog
  * @age: age of dog
- * @owner: owner name
+ * @owner: dog owner
  * Return: new dog
  */
+
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -23,25 +46,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	newdog = malloc(sizeof(dog_t));
 	if (newdog == NULL)
 		return (NULL);
-	newdog->name = malloc(sizeof(char) * namelen + 1);
+	newdog->name = malloc(sizeof(char) * (namelen + 1));
 	if (newdog->name == NULL)
 	{
 		free(newdog);
 		return (NULL);
 	}
-	newdog->owner = malloc(sizeof(char) * ownerlen + 1);
+	newdog->owner = malloc(sizeof(char) * (ownerlen + 1));
 	if (newdog->owner == NULL)
 	{
 		free(newdog);
 		free(newdog->name);
 		return (NULL);
 	}
-	for (i = 0; name[i] != '\0'; i++)
-		newdog->name[i] = name[i];
-	newdog->name[i] = '\0';
-	for (i = 0; owner[i] != '\0'; i++)
-		newdog->owner[i] = owner[i];
-	newdog->owner[i] = '\0';
+	_strcpy(dog->name, name);
+	_strcpy(dog->owner, owner);
 	newdog->age = age;
 	return (newdog);
 }
