@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (!fptr)
 	{
 		printf("Error\n");
-		exit(99);
+		exit(100);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
