@@ -5,7 +5,7 @@
  * get_op_func - get operation to be used on parameter passed
  * @s: function parameter
  * Return: the operator
-g*/
+ */
 
 int (*get_op_func(char *s))(int, int)
 {
