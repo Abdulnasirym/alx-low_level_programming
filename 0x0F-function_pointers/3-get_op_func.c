@@ -5,7 +5,7 @@
  * get_op_func - get operation to be used on parameter passed
  * @s: function parameter
  * Return: the operator
- */
+g*/
 
 int (*get_op_func(char *s))(int, int)
 {
@@ -21,7 +21,7 @@ int (*get_op_func(char *s))(int, int)
 
 	i = 0;
 
-	while (i < 5)
+	while (*ops[i].op)
 	{
 		if (*s == *ops[i].op)
 			return (*ops[i].f);
