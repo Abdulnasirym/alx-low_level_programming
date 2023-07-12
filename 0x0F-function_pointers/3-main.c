@@ -9,7 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, (*fptr)(int, int);
+	int a, b;
+	int (*fptr)(int, int);
 
 	if (argc != 4)
 	{
@@ -21,8 +22,9 @@ int main(int argc, char *argv[])
 	if (!fptr)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
