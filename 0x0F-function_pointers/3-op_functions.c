@@ -57,7 +57,7 @@ int op_div(int a, int b)
  * op_mod - modulus
  * @a: para 1
  * @b: param 2
- * Return: sum;
+ * Return: division;
  */
 
 int op_mod(int a, int b)
