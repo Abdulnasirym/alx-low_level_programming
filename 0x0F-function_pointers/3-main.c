@@ -9,17 +9,16 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, result;
-	char s;
+	int a, b, (*fptr)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	s = argv[2][0];
+	fptr = get_op_func(argv[2]);
 
-	if (s != '+' && s != '-' && s != '*' && s != '/' && s != '%')
+	if (fptr == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -27,8 +26,7 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	result = (get_op_func(argv[2]))(a, b);
-	printf("%d\n", result);
+	printf("%d\n", fptr(a, b));
 
 	return (0);
 }
