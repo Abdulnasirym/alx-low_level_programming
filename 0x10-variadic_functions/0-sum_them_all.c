@@ -1,7 +1,5 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
+
 /**
  * sum_them_all - sum given inputs
  * @n: input params
@@ -21,7 +19,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		sum += va_arg(lst, unsigned int);
+		sum += va_arg(lst, int);
 	}
 	va_end(lst);
 	return (sum);
