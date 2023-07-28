@@ -9,20 +9,21 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	va_list arg;
-	
-	va_start (arg, n);
+
+	va_start(arg, n);
 	for (i = 0; i < n; i++)
 	{
 		if (separator != NULL)
 		{
 			printf("%d", va_arg(arg, int));
-			printf("%s", separator);
+			if (i != n - 1)
+				printf("%s", separator);
 		}
 		else
 			printf("%d", va_arg(arg, int));
 	}
-	_putchar('\n');
+	putchar('\n');
 	va_end(arg);
 }
